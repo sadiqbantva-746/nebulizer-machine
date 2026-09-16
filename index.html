@@ -171,6 +171,80 @@ input,.submit{max-width:100%;min-width:0}
   .heroimg{max-width:560px;width:100%;height:auto}
 }
 
+
+/* MOBILE BANNER / WIDTH FIX V2 */
+html,body{overflow-x:hidden!important;width:100%!important}
+*{max-width:100%}
+.announcement{width:100%;max-width:100%;overflow:hidden}
+.ticker{max-width:none!important;width:max-content;white-space:nowrap}
+.ratingbar{width:100%;overflow:hidden}
+.nav,.hero,.trust,.order,.reviews,.product,.why,.footer{width:100%;max-width:100%;overflow:hidden}
+
+@media(max-width:700px){
+  /* Keep every section inside the phone width */
+  .hero,.order,.reviews,.product,.why{padding-left:12px!important;padding-right:12px!important}
+
+  /* Hero/banner image: never become a wide banner */
+  .heroimg{
+    display:block!important;
+    width:auto!important;
+    max-width:100%!important;
+    max-height:300px!important;
+    height:auto!important;
+    margin:0 auto!important;
+    object-fit:contain!important;
+  }
+
+  /* Product image/banner */
+  .product img{
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    height:auto!important;
+    margin:16px auto!important;
+    object-fit:contain!important;
+  }
+
+  /* Trust/why cards */
+  .trust,.whygrid{
+    width:100%!important;
+    grid-template-columns:1fr 1fr!important;
+  }
+  .trustbox,.whybox{width:100%;min-width:0}
+
+  /* Reviews must stay inside viewport */
+  .reviewticker{
+    width:100%!important;
+    max-width:100%!important;
+    overflow:hidden!important;
+  }
+  .reviewtrack{
+    width:max-content!important;
+    max-width:none!important;
+  }
+
+  /* Order form */
+  .form{
+    width:100%!important;
+    max-width:100%!important;
+    overflow:hidden;
+  }
+
+  /* WhatsApp button */
+  .wa-float{
+    right:10px!important;
+    bottom:10px!important;
+    max-width:calc(100vw - 20px)!important;
+  }
+}
+
+/* Extra small phones */
+@media(max-width:380px){
+  .heroimg{max-height:260px!important}
+  .hero h1{font-size:34px!important}
+  .navitems{font-size:8px!important}
+}
+
 </style>
 </head>
 <body>
